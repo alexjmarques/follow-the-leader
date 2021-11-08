@@ -1,5 +1,5 @@
 import LoadableComponent from './../Loadable/index';
-import { HomeOutlined, UserOutlined, TagsOutlined, AppstoreOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, TagsOutlined, AppstoreOutlined, InfoCircleOutlined, CheckCircleFilled } from '@ant-design/icons';
 
 export const userRouter: any = [
   {
@@ -38,6 +38,15 @@ export const appRouters: any = [
     icon: HomeOutlined,
     showInMenu: true,
     component: LoadableComponent(() => import('../../scenes/Dashboard')),
+  },
+  {
+    path: '/task',
+    name: 'task',
+    permission: '',
+    title: 'Task',
+    icon: CheckCircleFilled,
+    showInMenu: true,
+    component: LoadableComponent(() => import('../../scenes/Task')),
   },
   {
     path: '/users',
